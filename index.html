@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <!--***************-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:500,700&display=swap" rel="stylesheet">
+    <!--***************-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+        
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+        
+              // Store hash
+              var hash = this.hash;
+        
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 1100, function(){
+           
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+        </script>
+
+    <title>Akshat</title>
+</head>
+<body>
+    <div class="container" style="text-align: center;">
+         <!-- Image Slideshow -->
+         <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img class="card-img-top" src="https://source.unsplash.com/1600x900/?mountain" width=100% height="740">
+            </div>
+            <div class="mySlides fade">
+                <img class="card-img-top" src="https://source.unsplash.com/1600x900/?mountains" width=100% height="740">
+            </div>
+            <div class="mySlides fade">
+                <img class="card-img-top" src="https://source.unsplash.com/1600x900/?mountain,hills" width=100% height="740">
+            </div>
+            <div class="mySlides fade">
+                <img class="card-img-top" src="https://source.unsplash.com/1600x900/?mountain,lakes" width=100% height="740">
+            </div>
+        </div>
+        <!-- Image Slideshow -->
+
+        <!--Navbar-->
+        <div class="top-left" style="font-size:xx-large; font-family: 'Lobster', cursive;"><strong>AKSHAT</strong></div>
+        <div class="topnav" id="myTopnav"><strong>
+                <a style="color:blue" href="#home">HOME</a>
+                <a href="#projects">PROJECTS</a>
+                <a href="#pricing">PRICING</a>
+                <a href="#team">TEAM</a>
+                <a href="#blog">BLOG</a>
+                <a href="#contact">CONTACT</a>
+                <a href="#about">ABOUT</a>
+                <a class="icon">
+                    <div class="container4" onclick="icon(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </a></strong>
+        </div>
+        <script>
+            function icon(x) {
+                x.classList.toggle("change");
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                }
+                else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+            <!--Navbar-->
+        <div class="centered">
+            <div style="text-align: left">
+                <h1 style="left: 0px;margin-top: 10px;">One page promising website<br>tofill all your needs!</h1><br>
+                <p>This is photoshop version of Lorem ipsum. Proin<br>dolor sit amet, consectetur adipiscing elit</p>
+                <br>
+                <button class="button button7">Learn More</button>
+                <button class="button button4">Learn More</button>
+            </div>
+        </div>
+        <div class="bottom-left">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <!-- JS for Slideshow -->
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 1500);
+        }
+    </script>
+
+        <!-- Welcome to Zippy -->
+        <h1 style="text-align: center;margin-top: 50px; font-size: 55px;">Welcome to Zippy</h1>
+        <div class="welcome1" id="#projects">
+            <div>
+            <b> <p class="para" style="color: rgba(163, 161, 161, 0.74);">Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Nam
+                    nunc lacus, consequat vel arcu sit amet, laoreet tempor diam. Etiam lobortis eget lectus nec
+                    sollicitudin. Morbi ornare augue in lobortis fermentum.</p></b>
+            </div>
+            <div style="margin-top: 10px;">
+                <img src="https://img.icons8.com/ios-filled/150/000000/umbrella.png" alt="umbrella image" width=100% height="250">
+            </div>
+        </div>
+        <div class="welcome2">
+            <div>
+                <div class="round-icons">
+                <i class="fas fa-bell"></i>
+                </div>
+                <h4 style="padding-top: 20px; padding-bottom: 20px;">Lorem Ipusm</h4>
+                <p class="para" style="color: rgba(163, 161, 161, 0.74);">Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do
+                    eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.</p><br>
+                <button class="button button4" style="padding: 10px 20px;">Learn More</button>
+            </div>
+            <div>
+                <div class="round-icons">
+                <i class="fas fa-sms"></i>
+                </div>
+                <h4 style="padding-top: 20px; padding-bottom: 20px;">Lorem Ipusm</h4>
+                <p class="para" style="color: rgba(163, 161, 161, 0.74);">Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do
+                    eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.</p><br>
+                <button class="button button4" style="padding: 10px 20px;">Learn More</button>
+            </div>
+            <div>
+                <div class="round-icons">
+                    <i class="fas fa-umbrella"></i>
+                </div>
+                <h4 style="padding-top: 20px; padding-bottom: 20px;">Lorem Ipusm</h4>
+                <p class="para" style="color: rgba(163, 161, 161, 0.74);">Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do
+                    eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.</p><br>
+                <button class="button button4" style="padding: 10px 20px;">Learn More</button>
+            </div>
+        </div>
+
+        <!--Projects-->
+        <section class="text-gray-600 body-font">
+            <div class="container px-5 py-24 mx-auto">
+              <div class="flex flex-wrap w-full mb-20">
+                <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+                  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Projects</h1>
+                  <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+                </div>
+                <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
+              </div>
+              <div class="flex flex-wrap -m-4">
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                  <div class="bg-gray-100 p-6 rounded-lg">
+                    <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://source.unsplash.com/720x400/?project" alt="content">
+                    <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3>
+                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Chichen Itza</h2>
+                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                  </div>
+                </div>
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                  <div class="bg-gray-100 p-6 rounded-lg">
+                    <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://source.unsplash.com/721x401/?team" alt="content">
+                    <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3>
+                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Colosseum Roma</h2>
+                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                  </div>
+                </div>
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                  <div class="bg-gray-100 p-6 rounded-lg">
+                    <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://source.unsplash.com/722x402/?teamwork" alt="content">
+                    <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3>
+                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Great Pyramid of Giza</h2>
+                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                  </div>
+                </div>
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                  <div class="bg-gray-100 p-6 rounded-lg">
+                    <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://source.unsplash.com/723x403/?projects" alt="content">
+                    <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3>
+                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">San Francisco</h2>
+                    <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        <!--pRICING tABLE-->
+        <br><br><br>
+    <h1 style="text-align: center; margin-bottom: 50px; font-size: 55px;">Pricing Table</h1>
+    <div id="pricing" class="fc mar">
+        <div>
+            <h4 style="padding-bottom: 20px; font-size: 25px;">STANDARD PLAN</h4>
+            <p style="color: rgba(163, 161, 161, 0.74);">Free</p><br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p><br>
+            <button class="button button4">BUY</button>
+        </div>
+        <hr>
+        <div>
+            <h4 style="padding-bottom: 20px; font-size: 25px;">BUSINESS PLAN</h4>
+            <p style="color: rgba(163, 161, 161, 0.74);">19$/month</p><br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p><br>
+            <button class="button button4">BUY</button>
+        </div>
+        <hr>
+        <div>
+            <h4 style="padding-bottom: 20px; font-size: 25px;">PREMIUM PLAN</h4>
+            <p style="color: rgba(163, 161, 161, 0.74);">34$/month</p><br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p><br>
+            <button class="button button4">BUY</button>
+        </div>
+    </div>
+    <hr>
+
+        <!--pRICING tABLE-->
+
+        <!-- Video Projects -->
+    <h1 class="video-player" style="padding-bottom: 0px; font-size: 55px;">Video Projects</h1>
+    <div>
+        <div class="column c4">
+            <video autoplay loop controls muted>
+                <source src="assets\video-1.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <div class="column c4">
+            <video autoplay loop controls muted>
+                <source src="assets\video-2.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <div class="column c4">
+            <video autoplay loop controls muted>
+                <source src="assets\video-1.mp4" type="video/mp4" />
+            </video>
+        </div>
+    </div>
+    <hr>
+      <!-- Video Projects -->
+
+      <!--team section-->
+      <h1 style="text-align: center;">Zippy Team</h1>
+      <div id="team" class="team">
+          <div class="row">
+              <div class=" column c3">
+                  <div class="our-team">
+                      <div class="picture">
+                          <img class="img-fluid" src="assets\profile.png">
+                          <ul class="social">
+                              <li><a href="" class="fa fa-facebook" aria-hidden="true"></a></li>
+                              <li><a href="" class="fa fa-twitter" aria-hidden="true"></a></li>
+                              <li><a href="" class="fa fa-google-plus" aria-hidden="true"></a></li>
+                              <li><a href="" class="fa fa-linkedin" aria-hidden="true"></a></li>
+                          </ul>
+                      </div>
+                      <div class="team-content">
+                          <h3 class="name">Lorem ipsum</h3>
+                          <h4 class="title">Web Developer</h4>
+                      </div>
+                  </div>
+                  <div class="our-team">
+                      <div class="picture">
+                          <img class="img-fluid" src="assets\profile.png">
+                          <ul class="social">
+                              <li><a href="" class="fa fa-facebook" aria-hidden="true"></a></li>
+                              <li><a href="" class="fa fa-twitter" aria-hidden="true"></a></li>
+                              <li><a href="" class="fa fa-google-plus" aria-hidden="true"></a></li>
+                              <li><a href="" class="fa fa-linkedin" aria-hidden="true"></a></li>
+                          </ul>
+                      </div>
+                      <div class="team-content">
+                          <h3 class="name">Lorem ipsum</h3>
+                          <h4 class="title">Web Developer</h4>
+                      </div>
+                  </div>
+              </div>
+              <div class="column c3">
+                  <div class="our-team">
+                      <div class="picture">
+                          <img class="img-fluid" src="assets\profile.png">
+                          <ul class="social">
+                              <li><a href="" class="fa fa-facebook" aria-hidden="true"></a></li>
+                              <li><a href="" class="fa fa-twitter" aria-hidden="true"></a></li>
+                              <li><a href="" class="fa fa-google-plus" aria-hidden="true"></a></li>
+                              <li><a href="" class="fa fa-linkedin" aria-hidden="true"></a></li>
+                          </ul>
+                      </div>
+                      <div class="team-content">
+                          <h3 class="name">Lorem ipsum</h3>
+                          <h4 class="title">Web Developer</h4>
+                      </div>
+                  </div>
+                  <div class="our-team">
+                      <div class="picture">
+                          <img class="img-fluid" src="assets\profile.png">
+                          <ul class="social">
+                              <li><a href="" class="fa fa-facebook" aria-hidden="true"></a></li>
+                              <li><a href="" class="fa fa-twitter" aria-hidden="true"></a></li>
+                              <li><a href="" class="fa fa-google-plus" aria-hidden="true"></a></li>
+                              <li><a href="" class="fa fa-linkedin" aria-hidden="true"></a></li>
+                          </ul>
+                      </div>
+                      <div class="team-content">
+                          <h3 class="name">Lorem ipsum</h3>
+                          <h4 class="title">Web Developer</h4>
+                      </div>
+                  </div>
+              </div>
+              <div class="column c3">
+                  <div class="our-team">
+                      <div class="picture">
+                          <img class="img-fluid" src="assets\profile.png">
+                          <ul class="social">
+                              <li><a href="" class="fa fa-facebook" aria-hidden="true"></a></li>
+                              <li><a href="" class="fa fa-twitter" aria-hidden="true"></a></li>
+                              <li><a href="" class="fa fa-google-plus" aria-hidden="true"></a></li>
+                              <li><a href="" class="fa fa-linkedin" aria-hidden="true"></a></li>
+                          </ul>
+                      </div>
+                      <div class="team-content">
+                          <h3 class="name">Lorem ipsum</h3>
+                          <h4 class="title">Web Developer</h4>
+                      </div>
+                  </div>
+                  <div class="our-team">
+                      <div class="picture">
+                          <img class="img-fluid" src="assets\profile.png">
+                          <ul class="social">
+                              <li><a href="" class="fa fa-facebook" aria-hidden="true"></a></li>
+                              <li><a href="" class="fa fa-twitter" aria-hidden="true"></a></li>
+                              <li><a href="" class="fa fa-google-plus" aria-hidden="true"></a></li>
+                              <li><a href="" class="fa fa-linkedin" aria-hidden="true"></a></li>
+                          </ul>
+                      </div>
+                      <div class="team-content">
+                          <h3 class="name">Lorem ipsum</h3>
+                          <h4 class="title">Web Developer</h4>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <hr>
+      <!--team section-->
+
+      <!--Gallery Section-->
+      <div class="col">
+      <section class="text-black-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Life here</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
+          </div>
+          <div class="flex flex-wrap -m-4">
+            <div class="lg:w-1/3 sm:w-1/2 p-4">
+              <div class="flex relative">
+                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://source.unsplash.com/600x360/?John">
+                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
+                  <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-1/3 sm:w-1/2 p-4">
+              <div class="flex relative">
+                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://source.unsplash.com/601x361/?allen">
+                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
+                  <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-1/3 sm:w-1/2 p-4">
+              <div class="flex relative">
+                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://source.unsplash.com/603x363/?henry">
+                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The 400 Blows</h1>
+                  <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-1/3 sm:w-1/2 p-4">
+              <div class="flex relative">
+                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://source.unsplash.com/602x362/?Michael">
+                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Neptune</h1>
+                  <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-1/3 sm:w-1/2 p-4">
+              <div class="flex relative">
+                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://source.unsplash.com/605x365/?Roy">
+                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Holden Caulfield</h1>
+                  <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-1/3 sm:w-1/2 p-4">
+              <div class="flex relative">
+                <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="https://source.unsplash.com/606x366/?Elon">
+                <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                  <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
+                  <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
+      <hr>
+      <!--Gallery Section-->
+      
+      <!--newsletter-->
+      <!-- Newsletter Signup -->
+    <div class="container">
+        <img src="https://source.unsplash.com/3200x1200/?newsletter" alt="Newsletter image" width=100% height="300">
+        <div class="newsletter">
+            <h1 style="text-align: center;">Newsletter Signup</h1>
+            <input type="email" id="email" placeholder="abc@example.com" style="padding: 8.5px;">
+            <button class="button button4" style="margin: 0">SIGNIN</button>
+            <button class="button button4 button6">SIGNUP</button>
+        </div>
+        <hr>
+    </div>
+
+      <!--newsletter-->
+
+      <!--blog-->
+      <section class="text-gray-600 body-font col">
+        <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Blog</h1>
+            
+          </div>
+        <div class="container px-5 py-24 mx-auto ">
+          <div class="flex flex-wrap -m-4">
+            <div class="p-4 md:w-1/3">
+              <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://source.unsplash.com/720x400/?blog" alt="blog">
+                <div class="p-6">
+                  <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
+                  <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                  <div class="flex items-center flex-wrap ">
+                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                      <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14"></path>
+                        <path d="M12 5l7 7-7 7"></path>
+                      </svg>
+                    </a>
+                    <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                      <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                      </svg>1.2K
+                    </span>
+                    <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                      <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                      </svg>6
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/3">
+              <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://source.unsplash.com/721x401/?blogs" alt="blog">
+                <div class="p-6">
+                  <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The 400 Blows</h1>
+                  <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                  <div class="flex items-center flex-wrap">
+                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                      <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14"></path>
+                        <path d="M12 5l7 7-7 7"></path>
+                      </svg>
+                    </a>
+                    <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                      <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                      </svg>1.2K
+                    </span>
+                    <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                      <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                      </svg>6
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/3">
+              <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://source.unsplash.com/722x402/?blog-artist" alt="blog">
+                <div class="p-6">
+                  <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
+                  <p class="leading-relaxed mb-3 text-black-600">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                  <div class="flex items-center flex-wrap ">
+                    <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                      <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14"></path>
+                        <path d="M12 5l7 7-7 7"></path>
+                      </svg>
+                    </a>
+                    <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                      <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                      </svg>1.2K
+                    </span>
+                    <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                      <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                      </svg>6
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--blog-->
+      <!-- Map and Contact -->
+    <div id="contact" class="container">
+        <div class="row row1">
+            <div class="column c1">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60952.886278655016!2d74.16223527266087!3d17.28873196313616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc182450c753bad%3A0xb3493b19ae7886ca!2sKarad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1626031203497!5m2!1sen!2sin"
+                style="border:0;" allowfullscreen></iframe>
+            </div>
+            <div class="column c1" style="background: #bff;">
+                <div class="contact">
+                    <h1><strong>Contact</strong></h1><br>
+                </div>
+                <form name="contact" netlify style="padding-bottom: 5px;">
+                    <h6 style="margin-left:50px;">NAME<h6>
+                            <input type="text" id="name">
+                            <h6 style="margin-left:50px;">EMAIL ADDRESS</h6>
+                            <input type="text" id="email">
+                            <h6 style="margin-left:50px;">SUBJECT</h6>
+                            <input type="text" id="subject">
+                            <h6 style="margin-left:50px;">MESSAGE</h6>
+                            <textarea id="message" style="height:90px"></textarea>
+                            <br>
+                            <input type="submit" value="SEND">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <hr>
+    <section id="about" class="fc">
+        <div>
+            <h5><b>OFFICE ADDRESS</b></h5><br>
+            <p>Lorem Ipusm 123 <br>1200 consectetur adipiscing</p>
+        </div>
+        <div>
+            <h5><b>FOLLOW US</b></h5><br>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-tumblr"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+        <div>
+            <h5><b>CONTACT US</b></h5><br>
+            <p>+1234566789 <br>zippy@skype<br> enquiry@zippy.com</p>
+        </div>
+    </section>
+        
+
+    </div>
+    
+</body>
+</html>
