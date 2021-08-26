@@ -12,7 +12,7 @@
   }
   .container {
     position: relative;
-    color: white;
+    
   }
   
   .top-left {
@@ -20,7 +20,7 @@
     top: 9%;
     left: 22%;
     display: block;
-    color: white;
+    color: #333;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -78,7 +78,7 @@
   
   li a {
     display: block;
-    color: white;
+    color:#45a049;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
